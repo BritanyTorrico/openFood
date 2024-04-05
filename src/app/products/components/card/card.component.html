@@ -1,0 +1,36 @@
+
+<mat-card >
+  <div class="list_product_img_div">
+    <img src="{{producto.image_small_url}}"
+      alt="producto.product_name"
+      class="list_product_img">
+  </div>
+
+  <mat-card-content class="mt-2 custom-card ">
+    <mat-card-title class="font-bold text-base custom-title">{{producto.product_name}} -
+      {{producto.brands}} - {{producto.quantity}}</mat-card-title>
+    <mat-card-subtitle >Barcode:{{producto.id}}</mat-card-subtitle>
+    <p>
+      <strong>Categories:</strong>
+      {{formatCategories(producto.categories_hierarchy) }}
+    </p>
+
+  </mat-card-content>
+  <mat-divider></mat-divider>
+
+  <mat-card-actions>
+    <button mat-button
+      mat-raised
+      color="primary"
+      [routerLink]="['/products/edit', producto.id]">
+      <mat-icon>edit</mat-icon>
+      Edit</button>
+    <span class="spacer">
+      <button mat-button
+        mat-raised
+        [routerLink]="['/products', producto.id]">
+        <mat-icon>more_horiz</mat-icon>
+        More</button>
+    </span>
+  </mat-card-actions>
+</mat-card>

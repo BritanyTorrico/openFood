@@ -1,0 +1,36 @@
+
+
+
+.list_product_img_div {
+  height: 154px;
+  margin: 12px;
+}
+.list_product_img {
+  object-fit: contain;
+  width: 100%;
+  height:100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  display: inline-block;
+  vertical-align: middle;
+}
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.custom-card {
+  height: 150px;
+  padding: 2px;
+
+}
+
+ p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

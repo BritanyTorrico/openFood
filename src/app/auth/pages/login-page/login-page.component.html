@@ -1,0 +1,22 @@
+<div class="flex flex-column">
+  <div class="image-container">
+    <img src="assets/openfood.png" alt="Logo" class="logo-image">
+  </div>
+  <span class="text-xl mb-4 font-medium text-center">Ingresar</span>
+  <mat-form-field color="warn">
+    <mat-label>NOMBRE DE USUARIO</mat-label>
+    <input type="text" matInput placeholder="Nombre de Usuario">
+  </mat-form-field>
+
+  <mat-form-field  color="warn">
+    <mat-label>CONTRASEÑA</mat-label>
+    <input type="password" matInput placeholder="Ingrese contraseña">
+  </mat-form-field>
+
+  <button mat-flat-button color="warn">
+    <mat-icon>login</mat-icon>Ingresar</button>
+
+  <div class="flex justify-content-end mt-5">
+    <a routerLink="/auth/register"> ¿No tienes una cuenta ?</a>
+  </div>
+</div>

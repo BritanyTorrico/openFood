@@ -1,0 +1,64 @@
+
+<h1>
+  Edit Product
+  <small>Nutella</small>
+</h1>
+
+<mat-divider class="mb-2"></mat-divider>
+<div class="grid">
+  <div class="col-12 sm:col-6">
+    <mat-card>
+      <img src="" alt="imagen del heroe" mat-card-image>
+    </mat-card>
+  </div>
+  <div class="col-6 sm:col-6">
+    <mat-card>
+      <mat-card-content>
+        <div class="grid">
+          <mat-form-field class="col-12">
+            <mat-label>Name of product</mat-label>
+            <input
+              matInput
+              type="text" />
+          </mat-form-field>
+
+          <mat-form-field class="col-12">
+            <mat-label>Labels</mat-label>
+            <input
+              matInput
+              type="text" />
+          </mat-form-field>
+
+          <mat-form-field class="col-12">
+            <mat-label>Categories</mat-label>
+            <mat-select required>
+              <mat-option></mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <mat-label>Brands</mat-label>
+            <mat-select required>
+              <mat-option></mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+
+        <div class="flex justify-content-between">
+          <button mat-flat-button
+            color="warn">
+            Delete
+          </button>
+          <button mat-flat-button
+            color="primary">
+            <mat-icon>save</mat-icon>
+            Save
+          </button>
+        </div>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+
+</div>

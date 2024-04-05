@@ -1,0 +1,15 @@
+
+
+<h1 class="text-left">List of Products</h1>
+<mat-divider></mat-divider>
+
+<div class="grid">
+  <div class="mt-5 ">
+    <mat-spinner *ngIf="productos.length === 0"></mat-spinner>
+  </div>
+
+  <div *ngFor="let producto of productos"
+    class="col-12 sm:col-4 md:col-2 xl:col">
+    <productos-producto-card [producto]="producto"></productos-producto-card>
+  </div>
+</div>

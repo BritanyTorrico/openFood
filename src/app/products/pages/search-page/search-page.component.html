@@ -1,0 +1,33 @@
+<div class="flex flex-column p-2">
+  <h3 class="font-semibold">Product Search Hub</h3>
+  <div class="grid">
+    <mat-form-field class="col-10">
+      <mat-label>Search products</mat-label>
+      <input type="text" matInput [formControl]="searchInput" />
+    </mat-form-field>
+
+    <div class="col-2 flex align-items-center justify-content-center">
+      <button mat-stroked-button (click)="loadProducts()" color="primary">Search</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="m-5">
+  <mat-spinner *ngIf="loading"></mat-spinner>
+  <mat-spinner *ngIf="products.length === 0"></mat-spinner>
+</div>
+<h1 *ngIf="!loading && products.length > 0" class="text-left">List of Products</h1>
+
+<div class="grid">
+  <div *ngFor="let product of products | slice: pageIndex * pageSize : (pageIndex + 1) * pageSize"
+    class="col-12 sm:col-4 md:col-2 xl:col">
+    <productos-producto-card [producto]="product"></productos-producto-card>
+  </div>
+</div>
+
+<mat-paginator *ngIf="!loading && products.length > 0" [length]="totalItems" [pageSize]="pageSize"
+  [pageSizeOptions]="pageSizeOptions" (page)="onPageChange($event)" aria-label="Select page">
+</mat-paginator>
